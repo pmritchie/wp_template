@@ -27,7 +27,7 @@
 <?php if (get_the_author_meta('description') && get_theme_mod('w_authorBox', 1) && is_single()) : ?>
   <div class="w-author-box">
     <!-- img -->
-    <span class="w-img" itemscope itemprop="image" alt="<?php printf(esc_html__('Photo of %s', 'libertycommitteepress'), get_the_author_meta('display_name')); ?>">
+    <span class="w-img" itemscope itemprop="image" alt="<?php printf(esc_html__('Photo of %s', 'custom-theme'), get_the_author_meta('display_name')); ?>">
       <?php if (function_exists('get_avatar')) {
           echo get_avatar(get_the_author_meta('email'), 100);
         } ?>
@@ -63,7 +63,7 @@
 <!-- related -->
 <?php if (get_theme_mod('w_relatedArticles', 1) && is_single()) : ?>
   <div class="w-related-posts">
-    <h3><?php esc_html_e('Related Posts', 'libertycommitteepress') ?></h3>
+    <h3><?php esc_html_e('Related Posts', 'custom-theme') ?></h3>
     <?php $t = 1;
 
       global $post;

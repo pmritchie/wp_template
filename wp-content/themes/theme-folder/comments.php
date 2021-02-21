@@ -10,12 +10,12 @@ if (post_password_required()) {
 			<?php
 				if (1 === get_comments_number()) {
 					printf(
-						__('One thought on &ldquo;%s&rdquo;', 'libertycommitteepress'),
+						__('One thought on &ldquo;%s&rdquo;', 'custom-theme'),
 						'<span>' . get_the_title() . '</span>'
 					);
 				} else {
 					printf(
-						_n('%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'libertycommitteepress'),
+						_n('%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'custom-theme'),
 						number_format_i18n(get_comments_number()),
 						'<span>' . get_the_title() . '</span>'
 					);
@@ -33,14 +33,14 @@ if (post_password_required()) {
 
 		<?php /* comments nav */ if (get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
 			<nav id="comment-nav-below" class="navigation" role="navigation">
-				<div class="nav-previous"><?php previous_comments_link(__('&larr; Older Comments', 'libertycommitteepress')); ?></div>
-				<div class="nav-next"><?php next_comments_link(__('Newer Comments &rarr;', 'libertycommitteepress')); ?></div>
+				<div class="nav-previous"><?php previous_comments_link(__('&larr; Older Comments', 'custom-theme')); ?></div>
+				<div class="nav-next"><?php next_comments_link(__('Newer Comments &rarr;', 'custom-theme')); ?></div>
 			</nav>
 		<?php endif; ?>
 
 
 		<?php /* comments colesd? */ if (!comments_open() && get_comments_number()) :	?>
-			<p class="nocomments"><?php _e('Comments are closed.', 'libertycommitteepress'); ?></p>
+			<p class="nocomments"><?php _e('Comments are closed.', 'custom-theme'); ?></p>
 		<?php endif; ?>
 
 	<?php endif; // have_comments() 
